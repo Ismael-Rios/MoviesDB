@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import userName as userName
 
 sys.path.append('modules/')
 #sys.path.append('resources/')
