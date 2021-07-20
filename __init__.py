@@ -1,15 +1,9 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
-import userName as userName
-
-sys.path.append('modules/')
-#sys.path.append('resources/')
-
+from modules.userName import userName
 def main():
-    userName()
-    
+    user = userName()
+    print(user)
     
 if __name__ == "__main__":
     main()
