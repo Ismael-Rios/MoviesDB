@@ -12,24 +12,49 @@ def main():
 def window():
     window = tk.Tk()
     
-    label = tk.Label(text="Name")
-    entry = tk.Entry()
+    frame = tk.Frame()
     
+    label = tk.Label(
+        master=frame, 
+        text="Username"
+        )
     label.pack()
-    entry.pack()
+    
+    userEntry = tk.Entry(
+        master=frame
+        )
+    userEntry.pack()
+    
+    user = userEntry.get()
+    
+    label = tk.Label(
+        master=frame, 
+        text="Password"
+        )
+    label.pack()
+    
+    passEntry = tk.Entry(
+        master=frame
+        )
+    passEntry.pack()
     
     login = tk.Button(
+        master=frame,
         text="Login",
         width=7,
         height=1,
-    )
+        )
     login.pack()
     
+    frame.pack()
+    
     close = tk.Button(
+        master=frame,
         text="Close",
         width=7,
         height=1,
-    )
+        command=userEntry.delete(0, 4)
+        )
     close.pack()
 
     window.mainloop()
