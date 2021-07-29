@@ -3,60 +3,63 @@
 
 import sys
 import tkinter as tk
-#sys.path.append('modules/')
-#sys.path.append('resources/')
 
 def main():
-    window()
+    login()
     
-def window():
+def login():
+    def send():
+        userName = userEntry.get()
+        userPass = passEntry.get()
+        
+    def close():
+        window.destroy()
+
     window = tk.Tk()
     
-    frame = tk.Frame()
+    loginFrame = tk.Frame()
+    loginFrame.pack()
     
-    label = tk.Label(
-        master=frame, 
+    userLabel = tk.Label(
+        master=loginFrame, 
         text="Username"
-        )
-    label.pack()
+    )
+    userLabel.pack()
     
     userEntry = tk.Entry(
-        master=frame
-        )
+        master=loginFrame
+    )
     userEntry.pack()
     
-    user = userEntry.get()
-    
-    label = tk.Label(
-        master=frame, 
+    passLabel = tk.Label(
+        master=loginFrame, 
         text="Password"
-        )
-    label.pack()
+    )
+    passLabel.pack()
     
     passEntry = tk.Entry(
-        master=frame
-        )
+        master=loginFrame
+    )
     passEntry.pack()
     
-    login = tk.Button(
-        master=frame,
+    loginButton = tk.Button(
+        master=loginFrame,
         text="Login",
         width=7,
         height=1,
-        )
-    login.pack()
+        command=send,
+    )
+    loginButton.pack()
     
-    frame.pack()
-    
-    close = tk.Button(
-        master=frame,
+    closeButton = tk.Button(
+        master=loginFrame,
         text="Close",
         width=7,
         height=1,
-        command=userEntry.delete(0, 4)
-        )
-    close.pack()
-
+        command=close,
+    )
+    closeButton.pack()
+    
     window.mainloop()
     return()
     
