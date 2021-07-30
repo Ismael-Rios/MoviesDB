@@ -3,14 +3,14 @@
 import sys
 import tkinter as tk
 
-from modules.md5 import *
+from modules.dbConnect import *
 
 def login():
     def send():
         userName = userEntry.get()
         userPass = passEntry.get()
         
-        hash = md5(userName, userPass)
+        hash = checkCredential(userName, userPass)
         print(hash)
         
     def close():
