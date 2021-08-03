@@ -3,6 +3,7 @@
 import sys
 import tkinter as tk
 
+# Descrever a função/funcionalidade/etc
 def login():
     def send():
         userName = userEntry.get()
