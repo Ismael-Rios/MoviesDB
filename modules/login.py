@@ -14,6 +14,13 @@ def login():
     def close():
         window.destroy()
 
+    def registrar():
+        # Seguir daqui com a função de registrar (Comentario em uma linha)
+        '''
+        Comentário em várias linhas
+        (y)
+        '''
+
     window = tk.Tk()
     
     loginFrame = tk.Frame()
@@ -58,12 +65,22 @@ def login():
         command=close,
     )
     closeButton.pack()
+
+    cuRegistrador = tk.Button(
+        master=loginFrame,
+        text="Foda-se",
+        width=7,
+        height=1,
+        command=registrar,
+    )
+    cuRegistrador.pack()
     
     window.mainloop()
     return()
 
 def checkCredential(uName, uPass):
     import hashlib
+
     userName = hashlib.md5(uName.encode())
     userPass = hashlib.md5(uPass.encode())
     
