@@ -3,8 +3,6 @@
 import sys
 import tkinter as tk
 
-from modules.dbConnect import *
-
 def login():
     def send():
         userName = userEntry.get()
