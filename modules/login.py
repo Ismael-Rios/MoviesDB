@@ -63,3 +63,12 @@ def login():
     
     window.mainloop()
     return()
+
+def checkCredential(uName, uPass):
+    import hashlib
+    userName = hashlib.md5(uName.encode())
+    userPass = hashlib.md5(uPass.encode())
+    
+    md5 = userName.hexdigest() + ";" + userPass.hexdigest()
+
+    return(md5)
