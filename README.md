@@ -1,9 +1,9 @@
 # NamelessProject
 
-| Frontend | Backend |
-| -------- | ------- |
-| JavaScript | Python |
+:white_check_mark: Interface web em JavaScript (linguagem)
 
-:x: Interface web em JavaScript
+:x: Escolher framework (*React*, Angular ou Vue)?
 
-:x: Backend em python que se comunicará com o banco de dados
+:x: Backend em python para se comunicar com o banco de dados ou NodeJS?
+
+:x: SGBD Firebird ou PostgresSQL (DBeaver interface)?
