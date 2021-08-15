@@ -1,4 +1,4 @@
-# NamelessProject
+# MoviesDB
 
 🖥️ Frontend: HTML, CSS, JavaScript (ECMAScript)
 
